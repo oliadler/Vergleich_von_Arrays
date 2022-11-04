@@ -1,8 +1,8 @@
 public class Vergleich {
 
     private boolean sameSize;
-    private boolean samePairs;
-    private boolean equal;
+
+    private boolean equal = true;
 
     public boolean isEqual(int[] a, int[] b) {
 
@@ -14,29 +14,23 @@ public class Vergleich {
 
         }
 
-
-        //{1,3,3,5};
-        //{1,3,3,5};
-
-
         for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < b.length; j++) {
-                if (a[i] == b[i]) {
-                    samePairs = true;
-                    break;
-
-                } else {
-                    samePairs = false;
-                    break;
+            
+                if (a[i] != b[i])
+                {
+                    equal = false;
                 }
-            }
-
         }
 
-        if (sameSize && samePairs) {
-            equal = true;
+        
+        if (equal && sameSize)
+        {
+            return true;
         }
-        return equal;
+        else
+        {
+            return false;
+        }
     }
 
 
