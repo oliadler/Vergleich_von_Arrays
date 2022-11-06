@@ -6,12 +6,10 @@ public class VergleichTest {
         // Testarrays a und b 
         int [] a = {3,5,1,3};
         int [] b = {1,5,3,3};
-        
 
         // Testarrays a1 und b1
         int [] a1 = {1,2,3,4};
         int [] b1 = {3,1,6,2};
-
 
         boolean isEqual;
 

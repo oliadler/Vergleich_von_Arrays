@@ -7,19 +7,31 @@ public class Vergleich {
 
     public boolean isEqual(int[] a, int[] b) {
 
+        // a und b werden ueberprueft, ob sie eventuell leer sind. Falls ja wird das Programm beendet.
+        if (a == null || a.length == 0)
+        {
+            System.out.println("Das Array ist leer.");
+            System.exit(0);
+        }
+
+        if (b == null || b.length == 0)
+        {
+            System.out.println("Das Array ist leer.");
+            System.exit(0);
+        }
 
         // Die Sortiermethode wird aufgerufen.
         sort(a);
         sort(b);
 
-        // Hier wird die Überpürft, ob beide Arrays die selbe Länge haben.
+        // Hier wird die ueberprueft, ob beide Arrays dieselbe Länge haben.
 
         if (a.length == b.length) {
             sameSize = true;
 
         }
 
-        // Überprüft, ob die Elemente im Array gleich sind, ansonsten wird equal auf false gesetzt.
+        // ueberprueft, ob die Elemente im Array gleich sind, ansonsten wird equal auf false gesetzt.
 
         for (int i = 0; i < a.length; i++) {
             
@@ -29,7 +41,7 @@ public class Vergleich {
                 }
         }
 
-        // Nur wenn beide Bedingungen true sind, gibt die Methode "isEqual()" ein true zurück.
+        // Nur wenn beide Bedingungen true sind, gibt die Methode "isEqual()" ein true zurueck.
         
         if (equal && sameSize)
         {
@@ -43,7 +55,7 @@ public class Vergleich {
 
 
 
-    // Methode, um ein Array nach aufsteigender größer zu sortieren.
+    // Methode, um ein Array nach aufsteigender groeßer zu sortieren.
 
     public int[] sort(int[] unsorted) {
 
