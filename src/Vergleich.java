@@ -2,21 +2,14 @@ public class Vergleich {
 
     // Dekleration und Initialisierung der Variablen sameSize und equal.
     private boolean sameSize;
-
     private boolean equal = true;
 
     public boolean isEqual(int[] a, int[] b) {
 
         // a und b werden ueberprueft, ob sie eventuell leer sind. Falls ja wird das Programm beendet.
-        if (a == null || a.length == 0)
+        if (a == null || a.length == 0 || b == null || b.length == 0)
         {
-            System.out.println("Das Array ist leer.");
-            System.exit(0);
-        }
-
-        if (b == null || b.length == 0)
-        {
-            System.out.println("Das Array ist leer.");
+            System.out.println("Eines der Arrays ist leer oder null");
             System.exit(0);
         }
 
